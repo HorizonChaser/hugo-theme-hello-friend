@@ -1,14 +1,21 @@
 <footer class="footer">
   <div class="footer__inner">
     {{ if $.Site.Copyright }}
-      <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
-      {{ else }}
-      {{ partial "logo.html" . }}
-      <div class="copyright">
-        <span>© {{ now.Year }} Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
-        <span><a href="https://github.com/panr/hugo-theme-hello-friend" target="_blank">Theme</a> made by <a href="https://github.com/panr" target="_blank">panr</a></span>
-      </div>
+    <div class="copyright copyright--user">{{ $.Site.Copyright | safeHTML }}</div>
+    {{ else }}
+    {{ partial "logo.html" . }}
+    <div class="copyright">
+      <span>© {{ now.Year }} Powered by <a href="https://gohugo.io" target="_blank" rel="noopener">Hugo</a></span>
+      <span><a href="https://github.com/panr/hugo-theme-hello-friend" target="_blank">Theme</a> made by <a
+          href="https://github.com/panr" target="_blank">panr</a></span>
+    </div>
+
     {{ end }}
+  </div>
+  <div>
+    <span>
+      <center><a href="https://icp.gov.moe/?keyword=20243141" target="_blank">萌ICP备20243141号</a></center>
+    </span>
   </div>
 </footer>
 
