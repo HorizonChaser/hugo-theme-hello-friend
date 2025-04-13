@@ -26,6 +26,7 @@
     }
   },
   "dependencies": {
+    "hello-friend": "file:",
     "yarn": "^1.22.10"
   },
   "devDependencies": {
