@@ -1,0 +1,17 @@
+{{ define "main" }}
+  <div class="til" style="text-align: left; max-width: 860px; margin: 0; padding-left: 20px;">
+    <h1>{{ .Title }}</h1>
+    {{ range (where .Site.RegularPages "Type" "til").GroupByPublishDate "2006-01" }}
+      <div class="til__group-month">
+        <h2 class="til__group-month-header">{{ .Key }}</h2>
+        <ul class="til__group-posts">
+          {{ range .Pages }}
+            <li class="til__post">
+              <a href="{{ .Permalink }}">{{ .Date.Format "2006-01-02" }}: {{ .Title }}</a>
+            </li>
+          {{ end }}
+        </ul>
+      </div>
+    {{ end }}
+  </div>
+{{ end }}
